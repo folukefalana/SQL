@@ -19,7 +19,7 @@ Gender varchar (10),
 Date_of_Birth date,
 HireDate datetime,
 primary key (staffid)
-) ```
+)```
 Select * from Employee
 
 Insert into Employee (staffid, firstname, secondname, gender,Date_of_Birth, hiredate)
