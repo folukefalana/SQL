@@ -46,3 +46,20 @@ where staffid  = 'ab281'
 truncate table employee
 ```
 
+```------identity in SQL -----
+CREATE TABLE PERSON (
+personid int identity (1,1) primary key not null,
+personname varchar (255) not null,
+age int
+)
+Select * from Person
+
+insert into PERSON (personname, age)
+values ('saidu', 45),
+('adebanjo', 49),
+('olorunda', 33),
+('martha', 88),
+('sandi', 100),
+('jackson', 22),
+('okunola', 19),
+('esther', 45)
