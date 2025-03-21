@@ -1,11 +1,11 @@
 # SQL (Structured Query Language) Class
 
 ### Project Title : Employee Database
-
+---
 ### Project Overview
 
 This project aims to access, manipulate, and analyze data stored in a company's databases. It will retrieve, filter, and transform data to gain insights and make informed decisions. 
-
+---
 ### Data Analysis
 
 ```SQL
@@ -32,5 +32,6 @@ values ( 'AB401', 'ayan', 'olakun', 'female', '1992-08-22', '2018-02-09'),
 ( 'AB298', 'ayomide', 'halleluyah', 'female', '1982-10-09','2018-07-11'),
 ( 'AB260', 'deborah', 'justin', 'female','1982-10-09', '2018-02-09'),
 ( 'AB281', 'wale', 'olanipekun', 'male','1982-10-09', '2018-02-09')
+```
 
 
