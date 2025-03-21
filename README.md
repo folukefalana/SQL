@@ -32,6 +32,12 @@ values ( 'AB401', 'ayan', 'olakun', 'female', '1992-08-22', '2018-02-09'),
 ( 'AB298', 'ayomide', 'halleluyah', 'female', '1982-10-09','2018-07-11'),
 ( 'AB260', 'deborah', 'justin', 'female','1982-10-09', '2018-02-09'),
 ( 'AB281', 'wale', 'olanipekun', 'male','1982-10-09', '2018-02-09')
-```
 
+-------to drop table --------
 
+drop table employee
+
+----delete sql command------
+
+delete from employee
+where staffid  = 'ab281'
