@@ -63,3 +63,44 @@ values ('saidu', 45),
 ('jackson', 22),
 ('okunola', 19),
 ('esther', 45)
+
+------Insert more records into Employee table-------
+
+```insert into [dbo].[Employee]
+values ( 'AB200', 'ayomide', 'halleluyah', 'female', '1982-10-09','2018-07-11'),
+( 'AB405', 'deborah', 'justin', 'female','1982-10-09', '2018-02-09'),
+( 'AB282', 'wale', 'olanipekun', 'male','1982-10-09', '2018-02-09'),
+( 'AB278', 'shukurat', 'lasisi', 'female','1982-10-09', '2018-02-09'),
+( 'AB240', 'johnson', 'mercy', 'female','1982-10-09', '2019-12-09'),
+( 'AB299', 'ayomide', 'halleluyah', 'female', '1982-10-09','2018-07-11'),
+( 'AB268', 'deborah', 'justin', 'female','1982-10-09', '2018-02-09'),
+( 'AB286', 'wale', 'olanipekun', 'male','1982-10-09', '2018-02-09'),
+( 'AB270', 'shukurat', 'lasisi', 'female','1982-10-09', '2018-02-09')
+
+select * from [dbo].[Employee]
+```
+---- to create second table call SALARY TABLE-------
+
+```CREATE TABLE Salary (
+salary_id int identity (1,1)not null,
+Staffid varchar (255),
+firstname varchar (255),
+lastname varchar (255),
+department nvarchar(max),
+salary decimal (10, 3) ---(10: precision, 3:scale)
+)
+
+select * from [dbo].[Salary]
+```
+
+
+
+
+
+
+
+
+
+
+
+
