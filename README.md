@@ -89,11 +89,9 @@ lastname varchar (255),
 department nvarchar(max),
 salary decimal (10, 3) ---(10: precision, 3:scale)
 )
-
 select * from [dbo].[Salary]
-```
-insert into salary (staffid, FirstName, lastname, Department, Salary)
 
+insert into salary (staffid, FirstName, lastname, Department, Salary)
 values ( 'AB401', 'ayan', 'olakun', 'Information Tech.', 45000.45),
 ( 'AB212', 'okorie', 'mercy','Account',500000.99999),
 ( 'AB223', 'joshua', 'chukwuemeka', 'Human Resources',100560.9339999),
@@ -104,6 +102,15 @@ values ( 'AB401', 'ayan', 'olakun', 'Information Tech.', 45000.45),
 ( 'AB260', 'deborah', 'justin', 'Logistics',900099.00697969),
 ( 'AB281', 'wale', 'olanipekun', 'Information Tech',873093.2344)
 
+----SUM, COUNT, MAX, MIN, AVERAGE---------------------------------
+
+SELECT SUM(Salary) AS TOTALSALARY FROM Salary
+
+SELECT AVG(Salary) AS AVERAGESALARY FROM Salary
+
+SELECT COUNT(Staffid) AS EmployeeCount FROM EMPLOYEE
+
+SELECT COUNT(Staffid) AS NumberOfEmployee FROM Salary
 
 
 
