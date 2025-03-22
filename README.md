@@ -121,7 +121,7 @@ set secondname = 'Endurance'
 where staffid = 'AB405'
 ```
 
-----UPDATE DEPARTMENT-------
+```----UPDATE DEPARTMENT-------
 
 select * from [dbo].[Salary]
 
@@ -129,7 +129,48 @@ UPDATE SALARY
 SET department = 'Information Tech.'
 where Staffid = 'AB234'
 
+SELECT * FROM Salary
+WHERE Staffid = 'AB281'
+```
+----CREATE ADDITIONAL COLUMN INTO EMPLOYEE TABLE-------
 
+ALTER TABLE EMPLOYEE
+ADD State_of_Origin varchar (50)
 
+select * from employee
 
+UPDATE EMPLOYEE
+SET State_of_Origin = 'Ekiti'
+where staffid = 'AB268'
 
+CREATE TABLE Payment (
+paymentid int identity (1,1) primary key,
+Account_No bigint not null,
+staffid int,
+Bank varchar (255) default 'Zenith Bank',
+Payment_Method varchar (50) check (Payment_Method = 'Cash' or Payment_Method = 'Transfer')
+)
+
+alter table payment
+alter column staffid varchar (30)
+
+select * from Payment
+
+insert into Payment (account_no,staffid,payment_method )
+values (2033030303, 'AB200', 'transfer'),
+(2123459910, 'AB401',  'transfer'),
+(2034562240, 'AB254',  'cash'),
+(2234556303, 'AB212',  'transfer'),
+(2033037703, 'AB249',  'cash'),
+(2033030303, 'AB298',  'cash'),
+(2455657503, 'AB260',  'transfer'),
+(2045595953, 'AB281',  'cash'),
+(2033030303, 'AB273',  'transfer'),
+(2077778903, 'AB299',  'transfer'),
+(2033030301, 'AB286', 'transfer'),
+(2123459911, 'AB260',  'transfer'),
+(2034562241, 'AB270',  'cash'),
+(2234556302, 'AB104',  'transfer'),
+(2033037705, 'AB268',  'cash'),
+(2033030306, 'AB270',  'cash'),
+(2455657509, 'AB300',  'transfer')
