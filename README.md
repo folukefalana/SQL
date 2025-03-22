@@ -174,3 +174,45 @@ values (2033030303, 'AB200', 'transfer'),
 (2033037705, 'AB268',  'cash'),
 (2033030306, 'AB270',  'cash'),
 (2455657509, 'AB300',  'transfer')
+
+------those receive their salary by cash-----
+SELECT * FROM Payment
+WHERE Payment_Method = 'Cash'
+
+select * from Payment
+where Payment_Method = 'TRANSFER'
+
+SELECT COUNT(*)  AS ZenithStaff FROM Payment
+where Bank = 'Zenith Bank'
+
+SELECT COUNT(*)  FROM Payment
+where Bank = 'GT BANK'
+
+SELECT COUNT(*)  FROM Payment
+where Payment_Method = 'Transfer'
+
+SELECT COUNT(*)  FROM Payment
+where Payment_Method = 'cASH'
+
+---Analysis on Employee table------
+
+select * from Employee
+
+select count(*)  from employee 
+where state_of_origin  = 'Kano'
+
+select count(*)  from employee 
+where gender  = 'male'
+
+select * from Salary
+
+select count(*)  from Salary
+where department  = 'Human Resources'
+
+select top 5 * from Salary
+
+select * from Salary
+where salary > 700000
+
+select Staffid, salary from Salary
+where salary < 700000
