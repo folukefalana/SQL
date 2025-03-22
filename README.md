@@ -101,8 +101,9 @@ values ( 'AB401', 'ayan', 'olakun', 'Information Tech.', 45000.45),
 ( 'AB298', 'ayomide', 'halleluyah', 'Logistics', 678000.991999),
 ( 'AB260', 'deborah', 'justin', 'Logistics',900099.00697969),
 ( 'AB281', 'wale', 'olanipekun', 'Information Tech',873093.2344)
+```
 
-----SUM, COUNT, MAX, MIN, AVERAGE---------------------------------
+```----SUM, COUNT, MAX, MIN, AVERAGE---------------------------------
 
 SELECT SUM(Salary) AS TOTALSALARY FROM Salary
 
@@ -111,6 +112,7 @@ SELECT AVG(Salary) AS AVERAGESALARY FROM Salary
 SELECT COUNT(Staffid) AS EmployeeCount FROM EMPLOYEE
 
 SELECT COUNT(Staffid) AS NumberOfEmployee FROM Salary
+```
 
 ```--update staff name-----
 
@@ -134,7 +136,7 @@ WHERE Staffid = 'AB281'
 ```
 ----CREATE ADDITIONAL COLUMN INTO EMPLOYEE TABLE-------
 
-ALTER TABLE EMPLOYEE
+```ALTER TABLE EMPLOYEE
 ADD State_of_Origin varchar (50)
 
 select * from employee
@@ -142,8 +144,8 @@ select * from employee
 UPDATE EMPLOYEE
 SET State_of_Origin = 'Ekiti'
 where staffid = 'AB268'
-
-CREATE TABLE Payment (
+```
+```CREATE TABLE Payment (
 paymentid int identity (1,1) primary key,
 Account_No bigint not null,
 staffid int,
@@ -174,45 +176,48 @@ values (2033030303, 'AB200', 'transfer'),
 (2033037705, 'AB268',  'cash'),
 (2033030306, 'AB270',  'cash'),
 (2455657509, 'AB300',  'transfer')
+```
+------those who received their salary by cash-----
 
-------those receive their salary by cash-----
-SELECT * FROM Payment
+```SELECT * FROM Payment
 WHERE Payment_Method = 'Cash'
+```
 
-select * from Payment
+```select * from Payment
 where Payment_Method = 'TRANSFER'
-
-SELECT COUNT(*)  AS ZenithStaff FROM Payment
+```
+```SELECT COUNT(*)  AS ZenithStaff FROM Payment
 where Bank = 'Zenith Bank'
-
-SELECT COUNT(*)  FROM Payment
+```
+```SELECT COUNT(*)  FROM Payment
 where Bank = 'GT BANK'
-
-SELECT COUNT(*)  FROM Payment
+```
+```SELECT COUNT(*)  FROM Payment
 where Payment_Method = 'Transfer'
-
-SELECT COUNT(*)  FROM Payment
+```
+```SELECT COUNT(*)  FROM Payment
 where Payment_Method = 'cASH'
-
+```
 ---Analysis on Employee table------
 
-select * from Employee
+```select * from Employee
 
 select count(*)  from employee 
 where state_of_origin  = 'Kano'
-
-select count(*)  from employee 
+```
+```select count(*)  from employee 
 where gender  = 'male'
-
-select * from Salary
+```
+```select * from Salary
 
 select count(*)  from Salary
 where department  = 'Human Resources'
-
-select top 5 * from Salary
+```
+```select top 5 * from Salary
 
 select * from Salary
 where salary > 700000
 
 select Staffid, salary from Salary
 where salary < 700000
+```
