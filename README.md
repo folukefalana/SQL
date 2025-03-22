@@ -112,8 +112,22 @@ SELECT COUNT(Staffid) AS EmployeeCount FROM EMPLOYEE
 
 SELECT COUNT(Staffid) AS NumberOfEmployee FROM Salary
 
+```--update staff name-----
 
+select * from [dbo].[Employee]
 
+update employee
+set secondname = 'Endurance'
+where staffid = 'AB405'
+```
+
+----UPDATE DEPARTMENT-------
+
+select * from [dbo].[Salary]
+
+UPDATE SALARY
+SET department = 'Information Tech.'
+where Staffid = 'AB234'
 
 
 
