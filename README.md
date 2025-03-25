@@ -308,3 +308,13 @@ Where Department = 'Account'
 Select *from Salary
 Where Department in ('Account', 'Logistics', 'Marketing')
 ```
+--------Logical Operators--------
+
+---AND
+---OR
+
+Select *from Employee
+Where Firstname = 'Wale' and Gender = 'Male'
+
+Select *from Employee
+Where Firstname = 'Tina' or Gender = 'Male'
