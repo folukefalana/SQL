@@ -208,19 +208,23 @@ where state_of_origin  = 'Kano'
 ```select count(*)  from employee 
 where gender  = 'male'
 ```
-```select * from Salary
 
-select count(*)  from Salary
+```select count(*)  from Salary
 where department  = 'Human Resources'
 ```
-```select top 5 * from Salary
 
+```select top 5 * from Salary
 select * from Salary
 where salary > 700000
 
+select Staffid,
+salary *from Salary
+where salary < 700000
+```
+
 --------Group and Order by----------
 
-Select *from Employee
+```Select *from Employee
 
 Select Count(staffid) as staffperstate, State_of_Origin from Employee
 Group by State_of_Origin
@@ -229,7 +233,6 @@ Order by count(staffid)desc
 Select Count(staffid) as staffperstate, State_of_Origin from Employee
 Group by State_of_Origin
 Order by count(staffid)asc
+```
 
-select Staffid, salary from Salary
-where salary < 700000
 ```
