@@ -218,6 +218,18 @@ where department  = 'Human Resources'
 select * from Salary
 where salary > 700000
 
+--------Group and Order by----------
+
+Select *from Employee
+
+Select Count(staffid) as staffperstate, State_of_Origin from Employee
+Group by State_of_Origin
+Order by count(staffid)desc
+
+Select Count(staffid) as staffperstate, State_of_Origin from Employee
+Group by State_of_Origin
+Order by count(staffid)asc
+
 select Staffid, salary from Salary
 where salary < 700000
 ```
