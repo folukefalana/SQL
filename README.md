@@ -4,7 +4,7 @@
 ---
 ### Project Overview
 
-This project aims to access, manipulate, and analyze data stored in a company's databases. It will retrieve, filter, and transform data to gain insights and make informed decisions. 
+This project aims to express some of the syntax in SQL (Structured Query Language) 
 ---
 ### Data Analysis
 
@@ -304,4 +304,7 @@ Where Department in ('Account', 'Logistics', 'Marketing')
 
 Select *from Salary
 Where Department = 'Account'
+
+Select *from Salary
+Where Department in ('Account', 'Logistics', 'Marketing')
 ```
