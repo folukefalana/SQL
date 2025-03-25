@@ -313,8 +313,13 @@ Where Department in ('Account', 'Logistics', 'Marketing')
 ---AND
 ---OR
 
-Select *from Employee
+```Select *from Employee
 Where Firstname = 'Wale' and Gender = 'Male'
 
 Select *from Employee
 Where Firstname = 'Tina' or Gender = 'Male'
+
+Select *from Employee
+Where Gender = 'Female' and Date_of_Birth <= '1992-08-22' 
+and State_of_Origin = 'Abuja'
+```
