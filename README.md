@@ -291,3 +291,17 @@ Where Salary between 50000 and 70000
 Select *from Salary
 Where Salary not between 50000 and 70000
 ```
+--------List Operator---------
+
+IN
+NOT IN
+
+```Select *from Employee
+Where Firstname in ('Ayan', 'Wale', 'Mercy')
+
+Select *from Salary
+Where Department in ('Account', 'Logistics', 'Marketing')
+
+Select *from Salary
+Where Department = 'Account'
+```
