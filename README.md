@@ -263,3 +263,31 @@ Select Count(staffid) as staffperstate, State_of_Origin from Employee
 Group by State_of_Origin
 Order by 2 asc
 ```
+-------Comparison/Relational Operator------------
+
+< Less than
+> Greater than 
+<> Not Equal
+
+```Select *from Salary
+
+Select *from Salary
+where salary = 500001.000
+
+Select *from Salary
+where salary > 500001.000
+
+Select *from Salary
+where salary < 500001.000
+```
+--------Range Operators----------
+
+Between 
+Not Between
+
+```Select *from Salary
+Where Salary between 50000 and 70000
+
+Select *from Salary
+Where Salary not between 50000 and 70000
+```
