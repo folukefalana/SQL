@@ -243,3 +243,13 @@ Select Count(staffid) as staffperstate, State_of_Origin from Employee
 Group by State_of_Origin
 Order by count(staffid)asc
 ```
+--------Having---------
+
+```Select Count(staffid) as staffperstate, State_of_Origin from Employee
+Group by State_of_Origin
+Having COUNT (staffid)>=3
+
+Select Count(staffid) as staffperstate, State_of_Origin from Employee
+Group by State_of_Origin
+Having COUNT (staffid)<=3
+```
