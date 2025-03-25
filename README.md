@@ -221,18 +221,25 @@ select Staffid,
 salary *from Salary
 where salary < 700000
 ```
-
---------Group and Order by----------
+--------Group By----------
 
 ```Select *from Employee
 
 Select Count(staffid) as staffperstate, State_of_Origin from Employee
+Group by State_of_Origin
+
+Select *from Salary
+
+Select Count(staffid) as department, department from Salary 
+Group by department
+```
+--------Order By------------
+
+```Select Count(staffid) as staffperstate, State_of_Origin from Employee
 Group by State_of_Origin
 Order by count(staffid)desc
 
 Select Count(staffid) as staffperstate, State_of_Origin from Employee
 Group by State_of_Origin
 Order by count(staffid)asc
-```
-
 ```
