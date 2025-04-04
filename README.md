@@ -265,8 +265,8 @@ Order by 2 asc
 ```
 -------Comparison/Relational Operator------------
 
-< Less than
-> Greater than 
+< Less than,
+> Greater than, 
 <> Not Equal
 
 ```Select *from Salary
@@ -282,7 +282,7 @@ where salary < 500001.000
 ```
 --------Range Operators----------
 
-Between 
+Between, 
 Not Between
 
 ```Select *from Salary
@@ -293,7 +293,7 @@ Where Salary not between 50000 and 70000
 ```
 --------List Operator---------
 
-IN
+IN,
 NOT IN
 
 ```Select *from Employee
@@ -323,3 +323,28 @@ Select *from Employee
 Where Gender = 'Female' and Date_of_Birth <= '1992-08-22' 
 and State_of_Origin = 'Abuja'
 ```
+-----Salary = 5% (0.05)-----
+
+```UPDATE SALARY 
+SET SALARY = SALARY *0.05
+WHERE STAFFID IN ('AB200', 'AB260', 'AB270')
+```
+--------Join---------
+
+---INNER JOIN
+---LEFT JOIN
+---RIGHT JOIN
+---FULL JOIN
+
+Select *From Employee
+Select *From Salary
+
+Select Employee.Firstname
+       Employee.gender
+       Employee.Hiredate
+       Employee.State_of_Origin
+       Salary.department
+       Salary.Salary
+From   Employee
+Join   Salary
+On Salary.staffid = employee.staffid
