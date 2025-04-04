@@ -338,6 +338,8 @@ WHERE STAFFID IN ('AB200', 'AB260', 'AB270')
 
 Select *From Employee
 Select *From Salary
+Select *From Payment
+
 
 Select Employee.Firstname
        Employee.gender
@@ -348,3 +350,5 @@ Select Employee.Firstname
 From   Employee
 Join   Salary
 On Salary.staffid = employee.staffid
+
+
