@@ -340,12 +340,11 @@ Select *From Employee
 Select *From Salary
 Select *From Payment
 
-
-Select Employee.Firstname
-       Employee.gender
-       Employee.Hiredate
-       Employee.State_of_Origin
-       Salary.department
+Select Employee.Firstname,
+       Employee.gender,
+       Employee.Hiredate,
+       Employee.State_of_Origin,
+       Salary.department,
        Salary.Salary
 From   Employee
 Join   Salary
