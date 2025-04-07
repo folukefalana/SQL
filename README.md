@@ -350,4 +350,20 @@ From   Employee
 Join   Salary
 On Salary.staffid = employee.staffid
 
+-------Uninon--------
+Union 
+Union all
+
+Select * From DimCustomer
+Union all
+Select * From DimEmployee
+
+Select 'Lekki_Store' as [BRANCHES], CustomerID AS [CUSTOMERID],
+        FirstName as [FIRSTNAME], LastName AS [LASTNAME], Age AS [AGE], 
+        Address as [ADDRESS], Transaction_Amount AS [TRANSACTION AMOUNT]
+FROM DimEmployee
+
+
+
+
 
