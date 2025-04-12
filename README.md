@@ -358,12 +358,107 @@ Select * From DimCustomer
 Union all
 Select * From DimEmployee
 
+Select * From DimCustomer
+Union 
+Select * From DimEmployee
+
 Select 'Lekki_Store' as [BRANCHES], CustomerID AS [CUSTOMERID],
         FirstName as [FIRSTNAME], LastName AS [LASTNAME], Age AS [AGE], 
-        Address as [ADDRESS], Transaction_Amount AS [TRANSACTION AMOUNT]
+        [Address] as [ADDRESS], Transaction_Amount AS [TRANSACTION AMOUNT]
 FROM DimEmployee
 
+---------------SQL VIEW--------------------------
 
+```Create view vw_Employee_tbl
+as
+Select StaffID, FirstName, Gender, Hiredate From Employee
+```
+
+```Create view vw_Employee_tbl2
+as
+Select 'Lekki_Store' as [BRANCHES], CustomerID AS [CUSTOMERID],
+        firstname as [FIRSTNAME], lastname AS [LASTNAME], Age AS [AGE], 
+        [Address] as [ADDRESS], Transaction_Amount AS [TRANSACTION AMOUNT]
+FROM DimEmployee
+Union
+Select 'Marina_Store' as [BRANCHES], CustomerID AS [CUSTOMERID],
+        FirstName as [FIRSTNAME], LastName AS [LASTNAME], Age AS [AGE], 
+        [Address] as [ADDRESS], Transaction_Amount AS [TRANSACTION AMOUNT]
+FROM LITA_Store_Marina
+```
+```
+select * from employee
+
+create view vw_Employee_tbl
+as
+SELECT STAFFID, firstname, gender, hiredate from employee
+
+select * from vw_Employee_tbl
+
+select * from [dbo].[vw_LITA_Store_Transaction_tbl]
+
+select * from [dbo].[vw_LITA_Store_Transaction_tbl2]
+
+create view vw_LITA_Employee_Info 
+as
+SELECT employee.staffid,employee.firstname, employee.secondname, employee.gender,  employee.hiredate, employee.state_of_origin,
+	salary.department,
+	salary.salary,
+	Payment.Account_No,
+	Payment.Bank,
+	Payment.Payment_Method
+from employee
+inner join Salary
+on salary.Staffid = employee.staffid
+inner join Payment
+on Payment.staffid = salary.Staffid
+
+select * from [dbo].[vw_LITA_Employee_Info]
+```
+
+-------SQL CASE WHEN-------------------------
+
+```SELECT * FROM EMPLOYEE
+
+ALTER TABLE EMPLOYEE
+ADD AGE AS DATEDIFF(YEAR, Date_of_Birth, Hiredate) -
+CASE
+       WHEN MONTH(Hiredate) < month(Date_of_birth)
+	   OR (MONTH(Hiredate) = month(Date_of_birth)
+	   AND DAY(Hiredate) < DAY(Date_of_birth))
+	THEN 1
+	ELSE 0
+```
+```ALTER TABLE EMPLOYEE
+ADD AGE AS DATEDIFF (YEAR;Date_of_Birth, Hiredate) -
+CASE
+WHEN MONTH (Hiredate) < Month (Date_of_Birth)
+
+SELECT * FROM EMPLOYEE
+---60 AND Above = Senior Executive
+---40 - 59 = Senior Manager
+---30 and 39 = Manager
+---Less than 30 = Assistant Manager
+
+```Slect Staffid, firstname, gender, state_of_origin
+CASE
+When Age >= 60 then 'Senior Executive'
+When Age between 40 and 59 then 'Senior Manager'
+When Age between 30 and 39 then 'Manager'
+When Age < = 29 then 'Assistant Manager'
+Else 'Unknown',
+End As AgeGroup
+From Employee
+```
+------Wild Card--------
+
+```
+SELECT * FROM DimCustomer
+
+SELECT FirstName, LastName, Gender, AddressLine1 
+FROM DimCustomer
+WHERE LastName LIKE '%MA%' AND Gender = 'M';
+```
 
 
 
